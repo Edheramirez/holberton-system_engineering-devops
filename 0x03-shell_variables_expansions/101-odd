@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l | cat -n | cut --character=6- | grep -p "^[13579]"
+ls -1 | cat -n | cut --character=6- | grep -p "^[13579]"

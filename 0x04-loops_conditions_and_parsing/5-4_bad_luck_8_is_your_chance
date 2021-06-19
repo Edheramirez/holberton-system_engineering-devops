@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#script that displays Holberton School 8 times and line 4 "bad luck" and 8 "good luck"
+
+i=1
+while [ $i -le 10 ]
+do
+    if [ $i == 4 ]
+    then
+	echo "bad luck"
+    elif [ $i == 8 ]
+    then
+	echo "good luck"
+    else
+    echo "Holberton School"
+    fi
+    (( i++ ))
+done

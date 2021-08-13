@@ -1,4 +1,4 @@
- # Create a file whit parameters
+# Create a file whit parameters
 file { 'holberton':
    path    => '/tmp/holberton',
    mode    => '0744',
@@ -6,4 +6,3 @@ file { 'holberton':
    group   => 'www-data',
    content => 'I love Puppet',
   }
-   

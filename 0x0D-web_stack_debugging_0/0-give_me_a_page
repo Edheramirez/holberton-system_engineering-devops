@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Apache server is off
+
+sudo service apache2 start

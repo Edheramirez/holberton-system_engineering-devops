@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Not found page 404
+
+apt-get update -y
+apt-get install nginx -y
+echo "Holberton School" > ~/index.html
+cp ~/index.html /var/www/html/
+
+sed -i '/server_name _;/ a\\\trewrite ^/redirect_me https://youtu.be/UJETerHAdJE permanent;' /etc/nginx/sites-available/default
+
+sed -i '/redirect_me/ a\\\terror_page 404 /404.html;' /etc/nginx/sites-available/default
+
+echo "Ceci n'est pas une page" > ~/404.html
+cp ~/404.html /var/www/html/
+
+service nginx restart

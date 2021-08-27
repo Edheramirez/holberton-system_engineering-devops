@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #Display information of domain and subdomain
-
 info_Domain () {
     A=$(dig $2.$1 | awk '/ANSWER SECTION:/{getline;print;}')
     RE=$(echo $A | cut -d' ' -f 4)

@@ -7,10 +7,7 @@ sudo apt-get install nginx -y
 echo "Holberton School" > ~/index.html
 cp ~/index.html /var/www/html/
 
-REDI="\tlocation /redirect_me {
-	       return 301 https://www.youtube.com;
-}"
-
+REDI="\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com;\n\t}"
 sed -i "/server_name _;/ a\\$REDI" /etc/nginx/sites-available/default
 
 service nginx restart

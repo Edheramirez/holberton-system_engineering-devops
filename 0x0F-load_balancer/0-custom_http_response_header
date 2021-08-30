@@ -26,5 +26,5 @@ config="server {
 
 echo "$config" > ~/config
 sudo mkdir -p /etc/nginx/sites-enabled
-sudo mv ~/default /etc/nginx/sites-enabled/default
+sudo cp config /etc/nginx/sites-enabled/default
 sudo service nginx restart
